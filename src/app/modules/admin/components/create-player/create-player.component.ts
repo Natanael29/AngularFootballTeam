@@ -22,6 +22,11 @@ export class CreatePlayerComponent implements OnInit {
   }
 
   create(name: string, age: string, position: string, url: string) : void {
+    name = name.trim();
+    age = age.trim();
+    position = position.trim();
+    url = url.trim();
+    if(!name || !age || !position || !url) {return; }
     let newPlayer = {
       id: -1,
       name : name,
@@ -29,10 +34,8 @@ export class CreatePlayerComponent implements OnInit {
       position : position,
       url: url
     }
-    if (newPlayer) {
-      this.playerService.createPlayer(newPlayer)
-      .subscribe(() => this.goBack())
-    }
+    this.playerService.createPlayer(newPlayer)
+    .subscribe(() => this.goBack())
   }
 
 }

@@ -18,8 +18,9 @@ export class PlayerService {
     return players;
   }
 
-  getPlayer(id: number): void {
-    // return this.players.filter(player => player.id === id);
+  getPlayer(id: number) {
+    let player = this.players.find(player => player.id === id);
+    return player;
   }
 
   createPlayer(player: Player): Observable<Player[]> {
@@ -27,6 +28,12 @@ export class PlayerService {
     console.log(player);
     this.players.push(player);
     return this.getPlayers();
+  }
+
+  updatePlayer(player: Player)  {
+    let p = this.players.find(p => p.id === player.id);
+    p = player;
+    return p;
   }
 
   deletePlayer(id: number) {

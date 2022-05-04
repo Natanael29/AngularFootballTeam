@@ -1,7 +1,7 @@
 <div class="container pt-5 pb-5">
     <div class="col-12">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" routerLink="create">Add Player</button>
+        <button type="button" class="btn btn-primary" routerLink="create">Add Player<i class="uil uil-plus ms-2"></i></button>
     </div>
     <div class="col-12">
         <div class="d-flex flex-wrap justify-content-between">
@@ -10,8 +10,8 @@
                     <h3 class="fw-bold text-end">{{player.position}}</h3>
                     <img src="{{player.url}}" alt="player-image" class="player-image">
                     <p class="card-text h4 mt-4 text-center">{{player.name}} - {{player.age}} años</p>
-                    <div class="mt-2">
-                        <button type="button" class="btn btn-warning me-2">Edit</button>
+                    <div class="mt-2 d-flex justify-content-center">
+                        <button type="button" class="btn btn-warning me-2" routerLink="details/{{player.id}}">Edit</button>
                         <button type="button" class="btn btn-danger" (click)="deletePlayer(player.id)">Delete</button>
                     </div>
                 </div>
