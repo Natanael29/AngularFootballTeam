@@ -5,6 +5,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CreatePlayerComponent } from './components/create-player/create-player.component';
+import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,8 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
+      { path: 'home/create', component: CreatePlayerComponent },
+      { path: 'home/details/:id', component: PlayerDetailsComponent },
       { path: 'services', component: ServicesComponent },
       { path: 'contact', component: ContactComponent },
       { path: '', redirectTo: '/admin/home', pathMatch: 'full' },

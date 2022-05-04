@@ -9,9 +9,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { AboutComponent } from './components/about/about.component';
+import { CreatePlayerComponent } from './components/create-player/create-player.component';
+import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 
 @NgModule({
-  declarations: [AdminDashboardComponent, HeaderComponent, FooterComponent, HomeComponent, ContactComponent, ServicesComponent, AboutComponent],
+  declarations: [AdminDashboardComponent, HeaderComponent, FooterComponent, HomeComponent, ContactComponent, ServicesComponent, AboutComponent, CreatePlayerComponent, PlayerDetailsComponent],
   imports: [CommonModule, AdminRoutingModule],
 })
 export class AdminModule {}

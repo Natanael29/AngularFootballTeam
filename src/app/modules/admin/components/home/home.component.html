@@ -1,46 +1,19 @@
 <div class="container pt-5 pb-5">
     <div class="col-12">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" routerLink="create">Add Player</button>
+    </div>
+    <div class="col-12">
         <div class="d-flex flex-wrap justify-content-between">
-            <div class="card shadow mt-2">
+            <div class="card shadow mt-2" *ngFor="let player of players">
                 <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card shadow mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Admin Component</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a class="btn btn-primary">Go somewhere</a>
+                    <h3 class="fw-bold text-end">{{player.position}}</h3>
+                    <img src="{{player.url}}" alt="player-image" class="player-image">
+                    <p class="card-text h4 mt-4 text-center">{{player.name}} - {{player.age}} años</p>
+                    <div class="mt-2">
+                        <button type="button" class="btn btn-warning me-2">Edit</button>
+                        <button type="button" class="btn btn-danger" (click)="deletePlayer(player.id)">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>

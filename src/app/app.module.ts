@@ -9,6 +9,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     NgbModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],
